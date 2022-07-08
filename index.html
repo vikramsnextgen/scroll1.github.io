@@ -164,6 +164,8 @@ transform: translateY(0);
 
               var boxWrap = document.getElementById('box-wrap1');
               boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
+              document.documentElement.style.overflow = 'auto';  // firefox, chrome
+
             }
           },
           { passive: true }
