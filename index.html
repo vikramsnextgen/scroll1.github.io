@@ -31,8 +31,8 @@
         margin: 0 auto;
       }
       #fixedSec {
-        
-        background-color: rgb(12, 50, 50);
+        position: relative;
+        background-color: aqua;
         backface-visibility: hidden !important;
         
         transition: all .35s ease-in-out;
@@ -45,8 +45,6 @@
 
      /* This timing applies on the way IN */
   transition-timing-function: ease-out;
-  transform: translateZ(0);
-        -webkit-transform: translateZ(0);
 
 /* A litttttle slower on the way in */
 transition: 0.25s;
@@ -54,18 +52,6 @@ transition: 0.25s;
 /* Move into place */
 transform: translateY(0);
 
--webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-attachment:fixed;
-
-top: 200px;
-height:500px;
-border:1px solid red;
-z-index: 0;
       }
 
       #scroll {
@@ -115,11 +101,8 @@ z-index: 0;
         fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa
         flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
       </h1>
-      <div id="fixedSec">
-        <h1>hello</h1>
-      </div>
 
-      <div id="">
+      <div id="fixedSec">
         <div id="scroll">
           <div class="box-wrap box-wrap1" id="box-wrap1">
             <div class="box">1</div>
@@ -177,8 +160,6 @@ z-index: 0;
               fixed.style.transition = 'ease-out';
               fixed.style.height = scrollPos+"px";
               fixed.style.top = scrollPos+"px";
-              
-              fixed.style.display = "block";
               
 
               var boxWrap = document.getElementById('box-wrap1');
