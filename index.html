@@ -31,7 +31,7 @@
         margin: 0 auto;
       }
       #fixedSec {
-        position: relative;
+        
         background-color: rgb(12, 50, 50);
         backface-visibility: hidden !important;
         
@@ -65,7 +65,7 @@ transform: translateY(0);
 top: 200px;
 height:500px;
 border:1px solid red;
-
+z-index: 0;
       }
 
       #scroll {
@@ -115,7 +115,9 @@ border:1px solid red;
         fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa
         flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
       </h1>
-      <div id="fixedSec"></div>
+      <div id="fixedSec">
+        <h1>hello</h1>
+      </div>
 
       <div id="">
         <div id="scroll">
@@ -174,7 +176,7 @@ border:1px solid red;
               fixed.style.float = 'left';
               fixed.style.transition = 'ease-out';
               fixed.style.height = scrollPos+"px";
-              fixed.style.height = scrollPos+"px";
+              fixed.style.top = scrollPos+"px";
               
               fixed.style.display = "block";
               
