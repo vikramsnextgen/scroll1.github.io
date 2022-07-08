@@ -45,12 +45,24 @@
 
      /* This timing applies on the way IN */
   transition-timing-function: ease-out;
+  transform: translateZ(0);
+        -webkit-transform: translateZ(0);
 
 /* A litttttle slower on the way in */
 transition: 0.25s;
 
 /* Move into place */
 transform: translateY(0);
+
+-webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+
+
 
       }
 
@@ -160,6 +172,8 @@ transform: translateY(0);
               fixed.style.transition = 'ease-out';
               fixed.style.height = scrollPos+"px";
               fixed.style.top = scrollPos+"px";
+              
+              fixed.style.display = "block";
               
 
               var boxWrap = document.getElementById('box-wrap1');
