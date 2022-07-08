@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: -webkit-fill-available;
+            -webkit-backface-visibility: hidden;
+            
+        }
+
+        body{
+            min-height: 100vh;
+  min-height: -webkit-fill-available;
+  -webkit-backface-visibility: hidden;
+  
+
+  
+        }
+
+ 
+      h1 {
+        width: 500px;
+      }
+
+      #wrap {
+        margin: 0 auto;
+      }
+      #fixedSec {
+        position: relative;
+        background-color: rgb(12, 50, 50);
+        backface-visibility: hidden !important;
+        
+        transition: all .35s ease-in-out;
+        z-index: 9990;
+
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transition-timing-function: ease;
+    
+
+     /* This timing applies on the way IN */
+  transition-timing-function: ease-out;
+  transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+
+/* A litttttle slower on the way in */
+transition: 0.25s;
+
+/* Move into place */
+transform: translateY(0);
+
+-webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+
+top: 200px;
+height:500px;
+border:1px solid red;
+
+      }
+
+      #scroll {
+        width: 100vw;
+        border: 1px solid #111;
+        padding: 0px;
+        margin: 0px;
+
+        overflow-x: scroll;
+        overflow-y: hidden;
+      }
+
+      .box-wrap {
+        padding: 0px;
+        margin: 0px;
+        height: 200px;
+        width: 2040px;
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+        padding: 0px;
+        background: #123;
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        line-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id="wrap">
+      <h1 id="topHeading">
+        asl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh
+        sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs
+        kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
+        kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah
+        fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa
+        flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl
+        fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh
+        sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs
+        kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
+        kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah
+        fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa
+        flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
+      </h1>
+      <div id="fixedSec"></div>
+
+      <div id="">
+        <div id="scroll">
+          <div class="box-wrap box-wrap1" id="box-wrap1">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+          </div>
+        </div>
+
+        <h1>
+          asl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas
+          kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
+          kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf
+          kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas
+          fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh
+          sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha
+          fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah
+          fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa
+          flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas
+          fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas
+          kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
+          kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf
+          kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
+        </h1>
+      </div>
+
+      <script>
+    
+        var scroller = {};
+        var topSpace = document.getElementById('topHeading').offsetHeight;
+
+        const scrollWidth =
+          document.getElementsByClassName('box-wrap').offsetWidth;
+
+        scroller.e = document.getElementById('scroll');
+
+        
+
+        window.addEventListener(
+          'scroll',
+          (event) => {
+            var scroll = document.documentElement.scrollTop;
+            if (scroll > 605 && 795 - scroll > window.screen.width - 2640) {
+               
+
+              var scrollPos = scroll - 770;
+              var fixed = document.getElementById('fixedSec');
+              fixed.style.float = 'left';
+              fixed.style.transition = 'ease-out';
+              fixed.style.height = scrollPos+"px";
+              fixed.style.height = scrollPos+"px";
+              
+              fixed.style.display = "block";
+              
+
+              var boxWrap = document.getElementById('box-wrap1');
+              boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
+            }
+          },
+          { passive: true }
+        );
+      </script>
+    </div>
+  </body>
+</html>
