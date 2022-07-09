@@ -6,23 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        html {
-            scroll-behavior: smooth;
-            height: -webkit-fill-available;
-            -webkit-backface-visibility: hidden;
-            
-        }
+      html {
+        scroll-behavior: smooth;
+        height: -webkit-fill-available;
+        -webkit-backface-visibility: hidden;
+      }
 
-        body{
-            min-height: 100vh;
-  min-height: -webkit-fill-available;
-  -webkit-backface-visibility: hidden;
-  
+      body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        -webkit-backface-visibility: hidden;
+      }
 
-  
-        }
-
- 
       h1 {
         width: 500px;
       }
@@ -34,9 +29,8 @@
         margin: 0 0;
         background-color: rgb(85, 11, 90);
         -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
       }
 
       #scroll {
@@ -44,7 +38,7 @@
         border: 1px solid #111;
         padding: 0px;
         margin: 0px;
-        
+
         overflow-x: scroll;
         overflow-y: hidden;
       }
@@ -89,7 +83,7 @@
       </h1>
 
       <div id="fixedSec">
-        <h1>hello</h1>
+        &nbsp;
       </div>
       <div id="">
         <div id="scroll">
@@ -125,7 +119,6 @@
       </div>
 
       <script>
-    
         var scroller = {};
         var topSpace = document.getElementById('topHeading').offsetHeight;
 
@@ -134,28 +127,23 @@
 
         scroller.e = document.getElementById('scroll');
 
-        
-
         window.addEventListener(
           'scroll',
           (event) => {
-            
             var scroll = document.documentElement.scrollTop;
             if (scroll > 605 && 795 - scroll > window.screen.width - 2640) {
-                event.preventDefault();
+              event.preventDefault();
 
               var scrollPos = scroll - 770;
               var fixed = document.getElementById('fixedSec');
               fixed.style.float = 'left';
               fixed.style.transition = 'ease-out';
-              fixed.style.height = scrollPos+20+"px";
-              fixed.style.top = scrollPos + 20+"px";
-              
+              fixed.style.height = scrollPos + 20 + 'px';
+              fixed.style.top = scrollPos + 20 + 'px';
 
               var boxWrap = document.getElementById('box-wrap1');
               boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
-              document.documentElement.style.overflow = 'auto';  // firefox, chrome
-
+              document.documentElement.style.overflow = 'auto'; // firefox, chrome
             }
           },
           { passive: true }
