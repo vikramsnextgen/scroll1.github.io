@@ -47,33 +47,63 @@
         align-items: center;
         box-shadow: 0 0 6px #000;
         color: #fff;
+
       }
       .extra,
+      #wrapper1 {
+        width: 75%;
+        margin: auto;
+        background-color: rgb(178, 35, 35);
+        height: 1000px;
+      }
+
+      #wrapper2 {
+        width: 75%;
+        margin: auto;
+        background-color: rgb(154, 35, 178);
+        height: 1000px;
+      }
       #wrapper {
+      }
+
+
+      #sticky1 {
+        position: sticky;
+        position: -webkit-sticky;
+        background: #f83d23;
+        width: 100px;
+        height: 100px;
+        top: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 6px #000;
+        color: #fff;
+      }
+      .extra,
+      #wrapper1 {
         width: 75%;
         margin: auto;
         background-color: rgb(178, 35, 35);
       }
-      #wrapper {
-        
+      #wrapper1 {
       }
       .extra {
         height: 100px;
       }
       body {
         font-family: georgia;
-        
       }
       h4 {
         text-align: center;
       }
       @media (min-height: 768px) {
         #wrapper {
-          height: 2000px;
+          height: 100vh;
         }
       }
 
-      #fixedSec{
+      #fixedSec {
         border: 1px solid red;
       }
     </style>
@@ -99,49 +129,78 @@
       <h4>Scroll to see the sticky element <em>sticking</em></h4>
       <div class="extra"></div>
       <br />
-      <div id="wrapper">
+      <div id="wrapper1">
         <div id="sticky">
+          <div id="fixedSec">
+            <div id="scroll">
+              <div class="box-wrap box-wrap1" id="box-wrap1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <div class="box">9</div>
+                <div class="box">10</div>
+              </div>
+            </div>
+          </div>
 
-            <div id="fixedSec">
-                <div id="scroll">
-                  <div class="box-wrap box-wrap1" id="box-wrap1">
-                    <div class="box">1</div>
-                    <div class="box">2</div>
-                    <div class="box">3</div>
-                    <div class="box">4</div>
-                    <div class="box">5</div>
-                    <div class="box">6</div>
-                    <div class="box">7</div>
-                    <div class="box">8</div>
-                    <div class="box">9</div>
-                    <div class="box">10</div>
-                  </div>
-                </div>
-
+          <br /><br /><br />
         </div>
-      </div>
-      <br />
-      <div class="extra"></div>
+        <br />
 
-     
+        <div class="extra"></div>
+      </div> 
 
-        
+
+      <br><br><br>
+
+
+      <div id="wrapper2">
+        <div id="sticky1">
+          <div id="fixedSec1">
+            <div id="scroll">
+              <div class="box-wrap box-wrap" id="box-wrap2">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <div class="box">9</div>
+                <div class="box">10</div>
+              </div>
+            </div>
+          </div>
+
+          <br /><br /><br />
+        </div>
+        <br />
+
+        <div class="extra"></div>
       </div>
+      
       <h1>
-        asl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas
-        kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
-        kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf
-        kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas
-        fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh
-        sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha
-        fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah
+        asl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh
+        sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs
+        kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
+        kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah
         fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa
-        flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas
-        fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas
-        kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
-        kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf
-        kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
+        flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl
+        fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh
+        sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs
+        kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf
+        kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa flkjsahf kjsah
+        fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdkasl fjas fhljksa
+        flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
       </h1>
+
+      
 
       <script>
         var scroller = {};
@@ -152,28 +211,52 @@
 
         scroller.e = document.getElementById('scroll');
 
+
         window.addEventListener(
           'scroll',
           (event) => {
-            var scroll = document.documentElement.scrollTop;
-            if (scroll > 605 && 795 - scroll > window.screen.width - 2640) {
-              var scrollPos = scroll - 770;
-              var fixed = document.getElementById('fixedSec');
-              fixed.style.float = 'left';
-            //   fixed.style.transition = 'ease-out';
-            //   fixed.style.height = scrollPos + 'px';
-            fixed.style.top = scrollPos + 'px';
+            
+            var scroll1 = document.documentElement.scrollTop;
+            if (scroll1 > 505 && 795 - scroll1 > window.screen.width - 2640) {
+              var scrollPos1 = scroll1 - 770;
+              var fixed1 = document.getElementById('fixedSec1');
+              fixed1.style.float = 'left';
+              //   fixed.style.transition = 'ease-out';
+              //   fixed.style.height = scrollPos + 'px';
+              fixed1.style.top = scrollPos1 + 'px';
 
-              var boxWrap = document.getElementById('box-wrap1');
-              boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
-
-              var wrapper1 = document.getElementById('wrapper');
-              wrapper1.style.height = scrollPos + 'px';
-
+              var boxWrap1 = document.getElementById('box-wrap1');
+              boxWrap1.style.transform = 'translateX(' + (755 - scroll1) + 'px)';
             }
           },
           { passive: true }
         );
+
+
+        window.addEventListener(
+          'scroll',
+          (event) => {
+            
+            var scroll1 = document.documentElement.scrollTop;
+            console.log(scroll1);
+            if (scroll1 > 2500) {
+                console.log("-----");
+                console.log(scroll1);
+                console.log("-----");
+              var scrollPos1 = scroll1 - 770;
+              var fixed1 = document.getElementById('fixedSec1');
+              fixed1.style.float = 'left';
+              //   fixed.style.transition = 'ease-out';
+              //   fixed.style.height = scrollPos + 'px';
+              fixed1.style.top = scrollPos1 + 'px';
+
+              var boxWrap2 = document.getElementById('box-wrap2');
+              boxWrap2.style.transform = 'translateX(' + (2500 - scroll1) + 'px)';
+            }
+          },
+          { passive: true }
+        );
+
       </script>
     </div>
   </body>
