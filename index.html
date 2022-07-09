@@ -24,11 +24,15 @@
 
       #wrap {
         margin: 0 auto;
+        scroll-behavior: smooth;
       }
       #fixedSec {
         margin: 0 0;
         background-color: rgb(85, 11, 90);
-        
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        scroll-behavior: smooth;
       }
 
       #scroll {
@@ -36,6 +40,7 @@
         border: 1px solid #111;
         padding: 0px;
         margin: 0px;
+        scroll-behavior: smooth;
 
         overflow-x: scroll;
         overflow-y: hidden;
@@ -47,6 +52,7 @@
         margin: 0px;
         
         width: 2040px;
+        scroll-behavior: smooth;
         
       }
 
@@ -60,6 +66,7 @@
         font-size: 20px;
         text-align: center;
         line-height: 200px;
+        scroll-behavior: smooth;
       }
     </style>
   </head>
