@@ -6,113 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-     
-     
-      #fixedSec {
-        margin: 0 0;
-        background-color: rgb(31, 90, 11);
-        /* -webkit-transition: all 2s ease;
-        -moz-transition: all 2s ease;
-        -o-transition: all 2s ease; */
-        scroll-behavior: smooth;
-      }
-
       #scroll {
-        
+        width: 100vw;
+        border: 1px solid #111;
         padding: 0px;
         margin: 0px;
-        scroll-behavior: smooth;
 
         overflow-x: scroll;
         overflow-y: hidden;
-       
       }
 
       .box-wrap {
         padding: 0px;
         margin: 0px;
-        position: sticky;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        
+        height: 200px;
         width: 2040px;
-        scroll-behavior: smooth;
-        position:static;
-        border: 2px solid rgb(111, 0, 128);
-    top:0;
-    
-    z-index:100;
-        
       }
 
       .box {
         height: 200px;
         width: 200px;
         padding: 0px;
-        background: rgb(27, 73, 181);
+        background: #123;
         display: inline-block;
         color: #fff;
         font-size: 20px;
         text-align: center;
         line-height: 200px;
-        scroll-behavior: smooth;
       }
 
       #sticky {
-  position: sticky;
-  position: -webkit-sticky;
-  background: #f83d23;
-  width: 100px;
-  height: 100px;
-  top: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 6px #000;
-  color: #fff;
-  height: 1000px;
-}
-
-#sticky {
-  position: sticky;
-  position: -webkit-sticky;
-  background: #f83d23;
-  width: 100px;
-  height: 100px;
-  top: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 6px #000;
-  color: #fff;
-}
-.extra,
-#wrapper {
-  width: 75%;
-  margin: auto;
-  background-color: #ccc;
-}
-#wrapper {
-  height: 800px;
-}
-.extra {
-  height: 100px;
-}
-body {
-  font-family: georgia;
-  height: 1000px;
-}
-h4 {
-  text-align: center;
-}
-@media (min-height: 768px) {
-  #wrapper{
-    height: 2000px;
-  }
-}
-
-
+        position: sticky;
+        position: -webkit-sticky;
+        background: #f83d23;
+        width: 100px;
+        height: 100px;
+        top: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 6px #000;
+        color: #fff;
+      }
+      .extra,
+      #wrapper {
+        width: 75%;
+        margin: auto;
+        background-color: #ccc;
+      }
+      #wrapper {
+        height: 800px;
+      }
+      .extra {
+        height: 100px;
+      }
+      body {
+        font-family: georgia;
+        height: 1000px;
+      }
+      h4 {
+        text-align: center;
+      }
+      @media (min-height: 768px) {
+        #wrapper {
+          height: 2000px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -133,24 +92,34 @@ h4 {
         flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
       </h1>
 
-
       <h4>Scroll to see the sticky element <em>sticking</em></h4>
-<div class="extra"></div>
-<br />
-<div id="wrapper">
-  <div id="sticky">
-    sticky
-  </div>
-</div>
-<br />
+      <div class="extra"></div>
+      <br />
+      <div id="wrapper">
+        <div id="sticky">
+
+            <div id="fixedSec">
+                <div id="scroll">
+                  <div class="box-wrap box-wrap1" id="box-wrap1">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                    <div class="box">4</div>
+                    <div class="box">5</div>
+                    <div class="box">6</div>
+                    <div class="box">7</div>
+                    <div class="box">8</div>
+                    <div class="box">9</div>
+                    <div class="box">10</div>
+                  </div>
+                </div>
+
+        </div>
+      </div>
+      <br />
+      <div class="extra"></div>
+
      
-
-      <div id="boxHere"></div>
-      <div id="boxThis">Box</div>
-
-
-      <div id="">
-        
 
         <h1>
           asl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas
@@ -182,17 +151,16 @@ h4 {
           'scroll',
           (event) => {
             var scroll = document.documentElement.scrollTop;
-            if (scroll > 305 && 705 - scroll > window.screen.width - 2640) {
-              event.preventDefault();
-
+            if (scroll > 605 && 795 - scroll > window.screen.width - 2640) {
               var scrollPos = scroll - 770;
               var fixed = document.getElementById('fixedSec');
-              //fixed.style.height = scrollPos + 'px';
-              //fixed.style.top = scrollPos + 'px';
+              fixed.style.float = 'left';
+            //   fixed.style.transition = 'ease-out';
+            //   fixed.style.height = scrollPos + 'px';
+            //   fixed.style.top = scrollPos + 'px';
 
               var boxWrap = document.getElementById('box-wrap1');
               boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
-              document.documentElement.style.overflow = 'auto'; // firefox, chrome
             }
           },
           { passive: true }
