@@ -52,10 +52,10 @@
       #wrapper {
         width: 75%;
         margin: auto;
-        background-color: #ccc;
+        background-color: rgb(178, 35, 35);
       }
       #wrapper {
-        height: 800px;
+        
       }
       .extra {
         height: 100px;
@@ -166,6 +166,10 @@
 
               var boxWrap = document.getElementById('box-wrap1');
               boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
+
+              var wrapper1 = document.getElementById('wrapper');
+              wrapper1.style.height = scrollPos + 'px';
+
             }
           },
           { passive: true }
