@@ -136,10 +136,8 @@
 
               var scrollPos = scroll - 770;
               var fixed = document.getElementById('fixedSec');
-              fixed.style.float = 'left';
-              fixed.style.transition = 'ease-out';
-              fixed.style.height = scrollPos + 20 + 'px';
-              fixed.style.top = scrollPos + 20 + 'px';
+              fixed.style.height = scrollPos + 'px';
+              fixed.style.top = scrollPos + 'px';
 
               var boxWrap = document.getElementById('box-wrap1');
               boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
