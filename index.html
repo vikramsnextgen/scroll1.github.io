@@ -6,26 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      html {
-        scroll-behavior: smooth;
-        height: -webkit-fill-available;
-        -webkit-backface-visibility: hidden;
-      }
-
-      body {
-        min-height: 100vh;
-        min-height: -webkit-fill-available;
-        -webkit-backface-visibility: hidden;
-      }
-
-      h1 {
-        width: 500px;
-      }
-
-      #wrap {
-        margin: 0 auto;
-        scroll-behavior: smooth;
-      }
+     
+     
       #fixedSec {
         margin: 0 0;
         background-color: rgb(31, 90, 11);
@@ -36,23 +18,31 @@
       }
 
       #scroll {
-        width: 100vw;
-        border: 1px solid #111;
+        
         padding: 0px;
         margin: 0px;
         scroll-behavior: smooth;
 
         overflow-x: scroll;
         overflow-y: hidden;
-        padding-top: 100px;
+       
       }
 
       .box-wrap {
         padding: 0px;
         margin: 0px;
+        position: sticky;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
         
         width: 2040px;
         scroll-behavior: smooth;
+        position:static;
+        border: 2px solid rgb(111, 0, 128);
+    top:0;
+    
+    z-index:100;
         
       }
 
@@ -68,6 +58,61 @@
         line-height: 200px;
         scroll-behavior: smooth;
       }
+
+      #sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  background: #f83d23;
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 6px #000;
+  color: #fff;
+  height: 1000px;
+}
+
+#sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  background: #f83d23;
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 6px #000;
+  color: #fff;
+}
+.extra,
+#wrapper {
+  width: 75%;
+  margin: auto;
+  background-color: #ccc;
+}
+#wrapper {
+  height: 800px;
+}
+.extra {
+  height: 100px;
+}
+body {
+  font-family: georgia;
+  height: 1000px;
+}
+h4 {
+  text-align: center;
+}
+@media (min-height: 768px) {
+  #wrapper{
+    height: 2000px;
+  }
+}
+
+
     </style>
   </head>
   <body>
@@ -88,24 +133,24 @@
         flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas kljfh sakjfhas fsdk
       </h1>
 
-      <div id="fixedSec">
-        &nbsp;
-      </div>
+
+      <h4>Scroll to see the sticky element <em>sticking</em></h4>
+<div class="extra"></div>
+<br />
+<div id="wrapper">
+  <div id="sticky">
+    sticky
+  </div>
+</div>
+<br />
+     
+
+      <div id="boxHere"></div>
+      <div id="boxThis">Box</div>
+
+
       <div id="">
-        <div id="scroll">
-          <div class="box-wrap box-wrap1" id="box-wrap1">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-            <div class="box">7</div>
-            <div class="box">8</div>
-            <div class="box">9</div>
-            <div class="box">10</div>
-          </div>
-        </div>
+        
 
         <h1>
           asl fjas fhljksa flkjsahf kjsah fkjlsa fkjshf kljsha fkljhs kjfhas
@@ -137,13 +182,13 @@
           'scroll',
           (event) => {
             var scroll = document.documentElement.scrollTop;
-            if (scroll > 605 && 795 - scroll > window.screen.width - 2640) {
+            if (scroll > 305 && 705 - scroll > window.screen.width - 2640) {
               event.preventDefault();
 
               var scrollPos = scroll - 770;
               var fixed = document.getElementById('fixedSec');
-              fixed.style.height = scrollPos + 'px';
-              fixed.style.top = scrollPos + 'px';
+              //fixed.style.height = scrollPos + 'px';
+              //fixed.style.top = scrollPos + 'px';
 
               var boxWrap = document.getElementById('box-wrap1');
               boxWrap.style.transform = 'translateX(' + (755 - scroll) + 'px)';
